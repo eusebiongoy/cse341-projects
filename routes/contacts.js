@@ -15,15 +15,13 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET ONE contact by ID (query parameter)
-router.get("/single", async (req, res) => {
+// GET ONE contact by ID
+router.get("/:id", async (req, res) => {
   try {
     const db = await connectDB();
 
-    const id = req.query.id;
-
     const contact = await db.collection("contacts").findOne({
-      _id: new ObjectId(id)
+      _id: new ObjectId(req.params.id)
     });
 
     if (!contact) {
