@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/eusebiongoy/cse341-projects/issues"
   },
-  "homepage": "https://github.com/eusebiongoy/cse341-projects#readme"
+  "homepage": "https://github.com/eusebiongoy/cse341-projects#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
